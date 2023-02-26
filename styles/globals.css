@@ -38,6 +38,7 @@ path{
 
 
 
+
 /* -------------------------
   POST STYLES -> BLOG PAGE
 -------------------------- */
@@ -45,8 +46,9 @@ path{
 .blog-title{
   color: black;
   /* padding: 2% 7%; */
-  margin-top: 5%;
+  /* margin-top: 5%; */
   padding-left: 5%;
+  padding-top: 5%;
 }
 
 
@@ -64,6 +66,12 @@ path{
   /* height: 250px; */
   /* padding-bottom: 15%; */
   padding: 5%;
+  transition: transform 500ms ease-out;
+}
+
+.post-card:hover{
+  transform: scale(0.95,0.95);
+  /* border: 1px solid red; */
 }
 
 .post-container{
@@ -75,7 +83,8 @@ path{
   /* gap: 2%; */
   /* border: 1px solid red; */
   /* height: min-content; */
-  padding: 5% 5%;
+  padding: 2% 5%;
+
 
 }
 
@@ -94,7 +103,7 @@ path{
 .card-thumb{
   border-radius: 5px;
   /* width: 100%; */
-  height: 250px;
+  height: 350px;
   /* float: left; */
   /* border: 1px solid rgb(0, 225, 255); */
   /* z-index: -5; */
@@ -180,6 +189,7 @@ path{
 
   .n1{
     color: white;
+    transition: color 200ms ease-in-out;
   }
 
   .n1:hover{
@@ -197,10 +207,44 @@ path{
   justify-content: center;
   align-items: center;
   padding: 5% 2%;
+  flex-direction: column;
 }
 
   .f-text{
     color: white;
+  }
+
+  .search{
+    /* border: 1px solid red; */
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+  }
+
+  .searchbar{
+    width: 100%;
+    /* position: absolute; */
+  }
+
+  .mag-con{
+    position: relative;
+    border: none;
+  }
+
+  .magGlass{
+    position: absolute;
+    right: 8px;
+    top: -8px;
+    /* padding-right: 50px; */
+    /* padding: 1px; */
+  }
+
+  .magGlass:hover{
+    cursor: pointer;
+  }
+
+  path{
+    color: #0f860f;
   }
 
 /* -------------------------
@@ -276,7 +320,7 @@ path{
 
 
 /* -------------------------
-  POST PAGE STYLES
+  POST/BLOG -- WHERE PAGINATION IS -- PAGE STYLES
 -------------------------- */
   .post-block{
     padding: 5%;
@@ -291,16 +335,22 @@ path{
   .post-title{
     /* border: 1px solid red; */
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
     margin-bottom: 1%;
     font-size: 2em;
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+
+  .about-postInfo{
+    display: flex;
+    width: 100%;
   }
   
   .post-date{
     /* border: 1px solid red; */
     width: 100%;
-    font-size: 0.9em;
-    margin-top: 5%;
+    font-size: 0.8em;
+    /* margin-top: 2%; */
     text-align: center;
     
   }
@@ -308,7 +358,11 @@ path{
   .post-thumbnail{
     /* border: 1px solid red; */
     width: 100%;
+    height: 350px;
     border-radius: 5px;
+		padding: 2% 4%;
+		/* padding: 45px; */
+
   }
 
   .hr{
@@ -327,7 +381,7 @@ path{
     padding-top: 2%;
     text-align: left;
     width: 100%;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
   }
 
   .backbtn{
@@ -352,6 +406,29 @@ path{
 
   pre{
     background-color: white !important;
+  }
+
+  .pagination-container{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    padding: 2% 7%;
+    text-decoration: underline;
+    font-size: 1.3em;
+    margin-bottom: 5%;
+  }
+
+  .link-con{
+    position: relative;
+  }
+
+  .page-link{
+    color: #800080;
+    text-decoration: none;
+  }
+
+  .not-current-link:hover, .page-link:hover{
+    color:#825d85;
   }
 
 	@media (max-width: 767px) {
@@ -410,12 +487,15 @@ path{
 
 .about-vp{
   color: #ffffff;
-  line-height: 1.25;
+  line-height: 1.35;
   /* padding: 4% 7%; */
 }
 
+.a-make-bold{
+  font-weight: 800;
+}
+
 .about-form{
-  padding: 7%;
   display: flex;
   flex-direction: column;
   /* width: 50%; */
@@ -423,6 +503,13 @@ path{
   justify-content: center;
   align-items: center;
   padding-bottom: 5%;
+}
+
+.sendinblue-form{
+  /* padding: 7%; */
+  /* border: 1px solid red; */
+  height: 850px;
+  /* margin-bottom: 0.5%; */
 }
 
 input, .button, .form-title{
@@ -559,6 +646,8 @@ label{
   padding: 0 7%;
 }
 
+
+
 /* -------------------------
   MOBILE ONLY STYLES
 -------------------------- */
@@ -619,6 +708,10 @@ label{
     padding: 1.5%;
     margin-top: 5%;
   }
+
+  /* .about-vp{
+    padding: 0 5%;
+  } */
 }
 
 
@@ -659,11 +752,11 @@ label{
   }
 
   .card-thumb{
-    height: 320px;
+    height: 380px;
   }
 
   .about-pic-container, .about-vp, .about-form{
-    padding: 15%;
+    padding: 5% 15%;
   }
 
   .about-mypic{

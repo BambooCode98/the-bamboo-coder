@@ -11,6 +11,12 @@ import HomePage from '@/components/HomePage';
 
 export default function Home({posts}) {
   // console.log(posts);
+  // posts.forEach(post => {
+  //   for(let i=0; i<post.frontmatter.tags.length;i++) {
+  //     console.log(post.frontmatter.tags[i],'b');
+
+  //   }
+  // })
 
   return (
     <>
@@ -19,7 +25,7 @@ export default function Home({posts}) {
         <meta name="description" content="Learn about generative art and AI with javascript and Python." />
         <meta name="keywords" content="Generative Art, AI, Deep Learning, Machine Learning, Learn to Code" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="" />
+        {/* <link rel="icon" href="" /> */}
       </Head>
       {/* <img src="" alt="img placeholder"/> */}
       <HomePage  posts={posts} />

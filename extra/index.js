@@ -8,6 +8,9 @@ import Head from 'next/head';
 
 
 export default function BlogHome({posts}) {
+  // console.log(posts);
+
+
   return (
     <>
       <Head>

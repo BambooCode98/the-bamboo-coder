@@ -80,6 +80,12 @@ export default function Contact() {
             <li className='c-l'>
               <a href='https://www.linkedin.com/in/james-thomas-860181238/' className='c-a'>LinkedIn</a>
             </li>
+            <li className='c-l'>
+              <a href='https://www.youtube.com/@TheBambooCoder' className='c-a'>Youtube - The Bamboo Coder</a>
+            </li>
+            <li className='c-l'>
+              <a href='https://pin.it/3A3jX5Z' className='c-a'>Pinterest - The Bamboo Coder</a>
+            </li>
             
             {/* <li>Giithub: BambooCode98</li> */}
           </ul>
